@@ -23,9 +23,8 @@ const getEmployeesCoverageWithArgs = (nameOrId) => {
 };
 
 function getEmployeesCoverage(nameOrId) {
-  const allEmployees = employees.filter((objEmployees) => objEmployees);
   if (!nameOrId) {
-    return allEmployees.reduce((acc, objEmployees) => {
+    return employees.reduce((acc, objEmployees) => {
       const specie = getSpecies(objEmployees.responsibleFor);
       const obj = {
         id: objEmployees.id,
